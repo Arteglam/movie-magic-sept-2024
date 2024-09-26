@@ -8,11 +8,11 @@ async function getDb() {
     return data;
 };
 
-async function getMovies() {
+async function getAll() {
     const db = await getDb();
     return db.movies;
 };
 
 export default {
-    getMovies,
+    getAll,
 };
