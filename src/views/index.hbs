@@ -1,14 +1,14 @@
-{{!-- {{#if isSearch}} --}}
+{{#if isSearch}}
 <section id="search">
     <h1>Search</h1>
-    <form action="" method="" class="form">
+    <form  method="GET" class="form">
         <input type="text" class="search" name="search" placeholder="Title...">
-        <input type="text" class="genre" name="" placeholder="Genre...">
-        <input type="number" class="year" name="" placeholder="Year...">
+        <input type="text" class="genre" name="genre" placeholder="Genre...">
+        <input type="number" class="year" name="year" placeholder="Year...">
         <input type="submit" value="search">
     </form>
 </section>
-{{!-- {{/if}} --}}
+{{/if}}
 
 <section id="catalog">
     <h1>All Movies</h1>
