@@ -17,3 +17,4 @@ JS Back-End Course Workshop @SoftUni
     10. Add Create page
     11. Add details page
     12. Add 404 page
+    13. Add movie rating
