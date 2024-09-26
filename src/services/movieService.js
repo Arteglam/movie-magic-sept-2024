@@ -14,7 +14,6 @@ const getOne = async (movieId) => {
     return resultMovie;
 };
 
-
 export default {
     getAll,
     create,
