@@ -13,6 +13,7 @@ app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
 // Express setup
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
 app.use(routes);
