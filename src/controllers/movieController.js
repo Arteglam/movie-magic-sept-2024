@@ -14,6 +14,10 @@ router.post('/create', async (req, res) => {
     res.redirect('/');
 });
 
+router.get('/search', (req, res) => {
+    res.render('home', { isSearch: true });
+});
+
 router.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId);
