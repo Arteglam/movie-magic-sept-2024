@@ -9,12 +9,14 @@ const getAll = async (filter = {}) => {
     }
 
     if (filter.genre) {
-        movies = movies.filter(movie => movie.genre === filter.genre);
+        movies = movies.filter(movie => movie.genre.toLowerCase() === filter.genre);
     }
 
     if (filter.year) {
         movies = movies.filter(movie => movie.year === filter.year);
     }
+
+    return movies;
 };
 const create = (movie) => {
     movie.id = uniqid();
