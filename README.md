@@ -32,9 +32,9 @@ JS Back-End Course Workshop @SoftUni
 
 ## Bonus:
 - [x] Rating helper
-- [ ] Fix filtering for movies
+- [x] Fix filtering for movies
+- [x] Filter cast based on added ones
 - [ ] Add character name
-- [ ] Filter cast based on added ones
 - [ ] Atlas
 
 Next time:

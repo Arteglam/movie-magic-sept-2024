@@ -1,22 +1,26 @@
 import Movie from "../models/Movie.js";
 
-// TODO: Refactor filter
-const getAll = async (filter = {}) => {
-    let movies = await Movie.find();
+const getAll = (filter = {}) => {
+    let moviesQuery = Movie.find();
 
     if (filter.search) {
-        movies = movies.filter(movie => movie.title.toLowerCase().includes(filter.search));
+        // moviesQuery = moviesQuery.filter(movie => movie.title.toLowerCase().includes(filter.search));
+        moviesQuery.find({ title: { $regex: filter.search, $options: 'i' } })
     }
 
     if (filter.genre) {
-        movies = movies.filter(movie => movie.genre.toLowerCase() === filter.genre);
+        // moviesQuery = moviesQuery.filter(movie => movie.genre.toLowerCase() === filter.genre);
+        // moviesQuery.where('genre').equals(filter.genre);
+        moviesQuery.find({ genre: filter.genre.toLowerCase() });
     }
 
     if (filter.year) {
-        movies = movies.filter(movie => movie.year === filter.year);
+        // moviesQuery = moviesQuery.filter(movie => movie.year === filter.year);
+        // moviesQuery.where('year').equals(filter.year);
+        moviesQuery.find({ year: filter.year });
     }
 
-    return movies;
+    return moviesQuery;
 };
 
 const create = (movie) => Movie.create(movie);
