@@ -25,13 +25,13 @@ const getAll = (filter = {}) => {
 
 const create = (movie) => Movie.create(movie);
 
-const getOne = (movieId) => Movie.findById(movieId).populate('casts');
+const getOne = (movieId) => Movie.findById(movieId).populate('casts.cast');
 
-const attach = async (movieId, castId) => {
+const attach = async (movieId, castId, character) => {
     // const movie = await Movie.findById(movieId);
     // movie.casts.push(castId);
     // return movie.save();
-    return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });
+    return Movie.findByIdAndUpdate(movieId, { $push: { casts: { cast: castId, character } } });
 };
 
 export default {
