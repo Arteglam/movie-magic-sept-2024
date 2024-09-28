@@ -1,4 +1,5 @@
 import express from 'express';
+import 'dotenv/config';
 import routes from './routes.js';
 import handlebarsinit from './config/handlebarsinit.js';
 import expressinit from './config/expressinit.js';

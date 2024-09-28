@@ -36,6 +36,7 @@ JS Back-End Course Workshop @SoftUni
 - [x] Filter cast based on added ones
 - [X] Add character name
 - [X] Atlas
+- [ ] env file
 
 Next time:
 - [ ] Add model validations
