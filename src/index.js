@@ -2,8 +2,11 @@ import express from 'express';
 import routes from './routes.js';
 import handlebarsinit from './config/handlebarsinit.js';
 import expressinit from './config/expressinit.js';
+import mongooseinit from './config/mongooseinit.js';
 
 const app = express();
+
+mongooseinit();
 handlebarsinit(app);
 expressinit(app);
 
