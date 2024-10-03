@@ -45,7 +45,8 @@ JS Back-End Course Workshop @SoftUni
     - [ ] Add Auth Controller
     - [ ] Add Auth Service
 - [ ] Add login page
-
+- [ ] Add dynamic navigation
+ 
 - [ ] Automatic login for registered users
 - [ ] Select dropdown with prepopulated value
 
