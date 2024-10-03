@@ -4,6 +4,7 @@
         "expressinit",
         "handlebarsinit",
         "mongooseinit",
+        "prepopulated",
         "uniqid",
         "webp"
     ]

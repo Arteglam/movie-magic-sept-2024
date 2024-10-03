@@ -38,5 +38,7 @@ JS Back-End Course Workshop @SoftUni
 - [X] Atlas
 - [ ] env file
 
-Next time:
+## Developing Steps - Workshop 3
+- [ ] Fix bug from previous workshop
 - [ ] Add model validations
+- [ ] Select dropdown with prepopulated value
