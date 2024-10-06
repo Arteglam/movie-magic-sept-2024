@@ -44,11 +44,12 @@ JS Back-End Course Workshop @SoftUni
     - [X] Add User model
     - [X] Add Auth Controller
     - [X] Add Auth Service
-- [X] Hash password before save
+- [X] Hash password before save `npm i bcrypt`
 - [X] Add login page
     - [x] Validate hashed password
-    - [x] create jwt token
-    - [ ] add token to cookie
+    - [x] create jwt token `npm i jsonwebtoken`
+    - [ ] add token to cookie `npm i cookie-parser`
+- [ ] Add authorization
 - [ ] Add dynamic navigation
  
 - [ ] Automatic login for registered users
