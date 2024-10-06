@@ -40,13 +40,15 @@ JS Back-End Course Workshop @SoftUni
 
 ## Developing Steps - Workshop 3
 - [X] Fix bug from previous workshop
-- [ ] Add register page
-    - [ ] Add User model
-    - [ ] Add Auth Controller
-    - [ ] Add Auth Service
+- [x] Add register page
+    - [X] Add User model
+    - [X] Add Auth Controller
+    - [X] Add Auth Service
+- [X] Hash password before save
 - [ ] Add login page
 - [ ] Add dynamic navigation
  
+- [ ] Validate rePassword
 - [ ] Automatic login for registered users
 - [ ] Select dropdown with prepopulated value
 
