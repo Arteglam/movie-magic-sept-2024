@@ -4,7 +4,9 @@ const getAll = () => Cast.find();
 
 // const getAllWithout = (castIds) => Cast.find({ _id: { $nin: castIds } });
 const getAllWithout = (casts) => {
-    const castIds = casts.map(cast => cast.cast._id);
+    // Some kind of error. Casts its not an array when I try to click attach on a movie without assigned cast. This check fixes the error for now.
+    const castsInput = Array.isArray(casts) ? casts : [];
+    const castIds = castsInput.map(cast => cast.cast._id);
     return Cast.find().nin('_id', castIds);
 };
 
