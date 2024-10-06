@@ -46,13 +46,14 @@ JS Back-End Course Workshop @SoftUni
     - [X] Add Auth Service
 - [X] Hash password before save
 - [X] Add login page
-    - [ ] Validate hashed password
-    - [ ] create jwt token
+    - [x] Validate hashed password
+    - [x] create jwt token
     - [ ] add token to cookie
 - [ ] Add dynamic navigation
  
-- [ ] Validate rePassword
 - [ ] Automatic login for registered users
 - [ ] Select dropdown with prepopulated value
+- [ ] Make jwt async
 
 - [ ] Add model validations
+- [ ] Validate rePassword
