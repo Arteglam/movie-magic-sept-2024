@@ -12,7 +12,8 @@ export const authMiddleware = (req, res, next) => {
         const decodedToken = jwt.verify(token, JWT_SECRET);
         return next();
     } catch (err) {
-
+        res.clearCookie(auth);
+        res.redirect('/auth/login');
     }
 
 
