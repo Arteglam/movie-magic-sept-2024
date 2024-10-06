@@ -1,7 +1,7 @@
 import { Schema, model, Types } from "mongoose";
 
 const movieSchema = new Schema({
-    _id: String,
+    // _id: String,
     title: {
         type: String,
         required: true,
@@ -30,7 +30,7 @@ const movieSchema = new Schema({
     description: {
         type: String,
         required: true,
-        maxLength: 100,
+        maxLength: 200,
     },
     imageUrl: {
         type: String,
@@ -44,6 +44,10 @@ const movieSchema = new Schema({
             ref: 'Cast'
         },
     }],
+    owner: {
+        type: Types.ObjectId,
+        ref: 'User',
+    }
 });
 
 const Movie = model('Movie', movieSchema);

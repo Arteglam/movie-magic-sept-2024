@@ -49,7 +49,8 @@ JS Back-End Course Workshop @SoftUni
     - [x] Validate hashed password
     - [x] create jwt token `npm i jsonwebtoken`
     - [ ] add token to cookie `npm i cookie-parser`
-- [ ] Add authorization
+- [X] Add authorization
+- [ ] Add owner control buttons in details page
 - [ ] Add dynamic navigation
  
 - [ ] Automatic login for registered users
