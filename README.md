@@ -50,6 +50,7 @@ JS Back-End Course Workshop @SoftUni
     - [x] create jwt token `npm i jsonwebtoken`
     - [ ] add token to cookie `npm i cookie-parser`
 - [X] Add authorization
+- [X] Add owner relation to movie
 - [ ] Add owner control buttons in details page
 - [ ] Add dynamic navigation
  
