@@ -51,7 +51,9 @@ JS Back-End Course Workshop @SoftUni
     - [ ] add token to cookie `npm i cookie-parser`
 - [X] Add authorization
 - [X] Add owner relation to movie
-- [ ] Add owner control buttons in details page
+- [x] Add owner control buttons in details page
+- [X] Delete movie
+- [ ] Edit movie
 - [ ] Add dynamic navigation
  
 - [ ] Automatic login for registered users

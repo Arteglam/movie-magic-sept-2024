@@ -49,6 +49,11 @@ router.get('/:movieId/delete', async (req, res) => {
     res.redirect('/');
 });
 
+router.get('/:movieId/edit', async (req, res) => {
+    const movieId = req.params.movieId;
+    res.render('movies/edit');
+})
+
 export default router;
 
 // Deprecated
