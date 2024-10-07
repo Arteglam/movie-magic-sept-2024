@@ -36,7 +36,7 @@ JS Back-End Course Workshop @SoftUni
 - [x] Filter cast based on added ones
 - [X] Add character name
 - [X] Atlas
-- [ ] env file
+- [X] env file
 
 ## Developing Steps - Workshop 3
 - [X] Fix bug from previous workshop
@@ -48,13 +48,14 @@ JS Back-End Course Workshop @SoftUni
 - [X] Add login page
     - [x] Validate hashed password
     - [x] create jwt token `npm i jsonwebtoken`
-    - [ ] add token to cookie `npm i cookie-parser`
+    - [X] add token to cookie `npm i cookie-parser`
 - [X] Add authorization
 - [X] Add owner relation to movie
 - [x] Add owner control buttons in details page
 - [X] Delete movie
-- [ ] Edit movie
-- [ ] Add dynamic navigation
+- [X] Edit movie
+- [ ] Logout
+- [X] Add dynamic navigation
  
 - [ ] Automatic login for registered users
 - [ ] Select dropdown with prepopulated value
