@@ -56,7 +56,7 @@ JS Back-End Course Workshop @SoftUni
 - [X] Edit movie
 - [X] Add dynamic navigation
 - [x] Logout
-- [x] Add route guard\
+- [x] Add route guard
 - [x] Show user email for logged in users
  
 - [x] Automatic login for registered users
