@@ -1,15 +1,16 @@
 import { Router } from "express";
 import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
+import { isAuth } from "../middlewares/authMiddleware.js";
 
 const router = Router();
 
 //URL: /movies/create
-router.get('/create', (req, res) => {
+router.get('/create', isAuth, (req, res) => {
     res.render('movies/create');
 });
 
-router.post('/create', async (req, res) => {
+router.post('/create', isAuth, async (req, res) => {
     const movieData = req.body;
     const ownerId = req.user?._id;
     await movieService.create(movieData, ownerId);
@@ -25,17 +26,17 @@ router.get('/search', async (req, res) => {
 router.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId).lean();
-    const isOwner = req.user?._id === movie.owner?.toString();
+    const isOwner = movie.owner && movie.owner.toString() === req.user?._id;
     res.render('movies/details', { movie, isOwner });
 });
 
-router.get('/:movieId/attach', async (req, res) => {
+router.get('/:movieId/attach', isAuth, async (req, res) => {
     const movie = await movieService.getOne(req.params.movieId).lean();
     const casts = await castService.getAllWithout(movie.casts).lean();
     res.render('movies/attach', { movie, casts });
 });
 
-router.post('/:movieId/attach', async (req, res) => {
+router.post('/:movieId/attach', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const castId = req.body.cast;
     const character = req.body.character;
@@ -43,19 +44,19 @@ router.post('/:movieId/attach', async (req, res) => {
     res.redirect(`/movies/${movieId}/details`);
 });
 
-router.get('/:movieId/delete', async (req, res) => {
+router.get('/:movieId/delete', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     await movieService.remove(movieId);
     res.redirect('/');
 });
 
-router.get('/:movieId/edit', async (req, res) => {
+router.get('/:movieId/edit', isAuth, async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId).lean();
     res.render('movies/edit', { movie });
 });
 
-router.post('/:movieId/edit', async (req, res) => {
+router.post('/:movieId/edit', isAuth, async (req, res) => {
     const movieData = req.body;
     const movieId = req.params.movieId;
     await movieService.edit(movieId, movieData);

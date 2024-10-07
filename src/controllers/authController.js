@@ -25,4 +25,10 @@ router.post('/login', async (req, res) => {
     res.redirect('/');
 });
 
+router.get('/logout', (req, res) => {
+    res.clearCookie('auth');
+    // Some process of token invalidation???
+    res.redirect('/');
+});
+
 export default router;

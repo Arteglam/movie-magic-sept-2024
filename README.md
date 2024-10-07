@@ -54,8 +54,9 @@ JS Back-End Course Workshop @SoftUni
 - [x] Add owner control buttons in details page
 - [X] Delete movie
 - [X] Edit movie
-- [ ] Logout
 - [X] Add dynamic navigation
+- [x] Logout
+- [x] Add route guard
  
 - [ ] Automatic login for registered users
 - [ ] Select dropdown with prepopulated value
