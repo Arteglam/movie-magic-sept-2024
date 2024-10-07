@@ -56,11 +56,12 @@ JS Back-End Course Workshop @SoftUni
 - [X] Edit movie
 - [X] Add dynamic navigation
 - [x] Logout
-- [x] Add route guard
+- [x] Add route guard\
+- [x] Show user email for logged in users
  
-- [ ] Automatic login for registered users
-- [ ] Select dropdown with prepopulated value
-- [ ] Make jwt async
+- [x] Automatic login for registered users
+- [X] Make jwt library async
 
+- [ ] Select dropdown with prepopulated value
 - [ ] Add model validations
 - [ ] Validate rePassword
