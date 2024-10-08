@@ -63,5 +63,5 @@ JS Back-End Course Workshop @SoftUni
 - [X] Make jwt library async
 
 - [ ] Select dropdown with prepopulated value
-- [ ] Add model validations
-- [ ] Validate rePassword
+- [X] Add model validations
+- [X] Validate rePassword
