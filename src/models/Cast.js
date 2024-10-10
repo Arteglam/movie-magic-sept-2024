@@ -7,17 +7,17 @@ const castSchema = new Schema({
     },
     age: {
         type: Number,
-        min: 1,
-        max: 120
+        min: [1, 'The person need to be at least 1 year old!'],
+        max: [120, 'The person can not be older then 120 years!']
     },
     born: {
         type: String,
-        minLength: 10,
+        minLength: [2, 'The origin of birth (born) must be at least 2 characters'],
         validate: [/^[A-Za-z0-9 ]+$/, 'Born can contain only alpha numeric characters!']
     },
     imageUrl: {
         type: String,
-        required: true,
+        required: [true, 'Image is required!'],
         validate: [/^https?:\/\//, 'Invalid image url!']
     },
 });
